@@ -1,0 +1,774 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host localhost
+under operating system Linux at Thu Jan 17 19:22:27 JST 2019
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks      Used Available Use% Mounted on
+/dev/sda1      895286904 141748204 708037672  17% /
+GAMESS temporary binary files will be written to .
+GAMESS supplementary output files will be written to .
+Copying input file N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.inp to your run's scratch directory...
+cp N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.inp ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F05
+unset echo
+/work/pubchem/pm6/pkg/gamess_intel/ddikick.x /work/pubchem/pm6/pkg/gamess_intel/gamess.00.x N2.SV/4.9/N2.SV.CCSDT.4.9.gamess -ddi 1 1 localhost -scr .
+
+ Distributed Data Interface kickoff program.
+ Initiating 1 compute processes on 1 nodes to run the following command:
+ /work/pubchem/pm6/pkg/gamess_intel/gamess.00.x N2.SV/4.9/N2.SV.CCSDT.4.9.gamess 
+
+          ******************************************************
+          *         GAMESS VERSION =  5 DEC 2014 (R1)          *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT INTEL VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     BRETT BODE, KURT BRORSEN, CALEB CARLIN, GALINA CHABAN, WEI CHEN,
+     CHEOL HO CHOI, PAUL DAY, ALBERT DEFUSCO, NUWAN DESILVA, TIM DUDLEY,
+     DMITRI FEDOROV, GRAHAM FLETCHER, MARK FREITAG, KURT GLAESEMANN,
+     DAN KEMP, GRANT MERRILL, NORIYUKI MINEZAWA, JONATHAN MULLIN,
+     TAKESHI NAGATA, SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON,
+     MIKE PAK, SPENCER PRUITT, LUKE ROSKOP, JIM SHOEMAKER, LYUDMILA SLIPCHENKO,
+     TONY SMITH, SAROM SOK, JIE SONG, TETSUYA TAKETSUGU, SIMON WEBB,
+     PENG XU, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, AARON WEST, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     NAT. INST. OF ADVANCED INDUSTRIAL SCIENCE AND TECHNOLOGY: KAZUO KITAURA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, PIOTR PIECUCH
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: ANNA POMOGAEVA, DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH: ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+     UNIVERSITY OF COPENHAGEN: CASPER STEINMANN
+     TOKYO INSTITUTE OF TECHNOLOGY: HIROYA NAKATA
+     NAGOYA UNIVERSITY: YOSHIO NISHIMOTO, STEPHAN IRLE
+
+ EXECUTION OF GAMESS BEGUN Thu Jan 17 19:22:27 2019
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD> $CONTRL SCFTYP=RHF CCTYP=CCSD(T) $END                                          
+ INPUT CARD> $CCINP NCORE=1 $END                                                            
+ INPUT CARD> $GUESS GUESS=HUCKEL $END                                                       
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>N2...CCSD(T)...Double-zeta basis                                                
+ INPUT CARD>Cnv   2                                                                         
+ INPUT CARD>                                                                                
+ INPUT CARD>N     7.0    0.0      0.0     0.0                                               
+ INPUT CARD>S   7                                                                           
+ INPUT CARD>  1   5909.0000000              0.0011900                                       
+ INPUT CARD>  2    887.5000000              0.0090990                                       
+ INPUT CARD>  3    204.7000000              0.0441450                                       
+ INPUT CARD>  4     59.8400000              0.1504640                                       
+ INPUT CARD>  5     20.0000000              0.3567410                                       
+ INPUT CARD>  6      7.1930000              0.4465330                                       
+ INPUT CARD>  7      2.6860000              0.1456030                                       
+ INPUT CARD>S   2                                                                           
+ INPUT CARD>  1      7.1930000             -0.1604050                                       
+ INPUT CARD>  2      0.7000000              1.0582150                                       
+ INPUT CARD>S   1                                                                           
+ INPUT CARD>  1      0.2133000              1.0000000                                       
+ INPUT CARD>P   4                                                                           
+ INPUT CARD>  1     26.7900000              0.0182540                                       
+ INPUT CARD>  2      5.9560000              0.1164610                                       
+ INPUT CARD>  3      1.7070000              0.3901780                                       
+ INPUT CARD>  4      0.5314000              0.6371020                                       
+ INPUT CARD>P   1                                                                           
+ INPUT CARD>  1      0.1654000              1.0000000                                       
+ INPUT CARD>                                                                                
+ INPUT CARD>N     7.0    0.0      0.0     4.9                                               
+ INPUT CARD>S   7                                                                           
+ INPUT CARD>  1   5909.0000000              0.0011900                                       
+ INPUT CARD>  2    887.5000000              0.0090990                                       
+ INPUT CARD>  3    204.7000000              0.0441450                                       
+ INPUT CARD>  4     59.8400000              0.1504640                                       
+ INPUT CARD>  5     20.0000000              0.3567410                                       
+ INPUT CARD>  6      7.1930000              0.4465330                                       
+ INPUT CARD>  7      2.6860000              0.1456030                                       
+ INPUT CARD>S   2                                                                           
+ INPUT CARD>  1      7.1930000             -0.1604050                                       
+ INPUT CARD>  2      0.7000000              1.0582150                                       
+ INPUT CARD>S   1                                                                           
+ INPUT CARD>  1      0.2133000              1.0000000                                       
+ INPUT CARD>P   4                                                                           
+ INPUT CARD>  1     26.7900000              0.0182540                                       
+ INPUT CARD>  2      5.9560000              0.1164610                                       
+ INPUT CARD>  3      1.7070000              0.3901780                                       
+ INPUT CARD>  4      0.5314000              0.6371020                                       
+ INPUT CARD>P   1                                                                           
+ INPUT CARD>  1      0.1654000              1.0000000                                       
+    1000000 WORDS OF MEMORY AVAILABLE
+
+
+     RUN TITLE
+     ---------
+ N2...CCSD(T)...Double-zeta basis                                                
+
+ THE POINT GROUP OF THE MOLECULE IS CNV     
+ THE ORDER OF THE PRINCIPAL AXIS IS     2
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ N           7.0     0.0000000000        0.0000000000        0.0000000000
+ N           7.0     0.0000000000        0.0000000000        9.2596573398
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 N          2 N     
+
+   1 N       0.0000000    4.9000000  
+   2 N       4.9000000    0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ N         
+
+      1   S       1          5909.0000000    0.001189999548
+      1   S       2           887.5000000    0.009098996542
+      1   S       3           204.7000000    0.044144983225
+      1   S       4            59.8400000    0.150463942825
+      1   S       5            20.0000000    0.356740864442
+      1   S       6             7.1930000    0.446532830321
+      1   S       7             2.6860000    0.145602944672
+
+      2   S       8             7.1930000   -0.160405033446
+      2   S       9             0.7000000    1.058215220651
+
+      3   S      10             0.2133000    1.000000000000
+
+      4   P      11            26.7900000    0.018253998243
+      4   P      12             5.9560000    0.116460988791
+      4   P      13             1.7070000    0.390177962446
+      4   P      14             0.5314000    0.637101938680
+
+      5   P      15             0.1654000    1.000000000000
+
+ N         
+
+      6   S      16          5909.0000000    0.001189999548
+      6   S      17           887.5000000    0.009098996542
+      6   S      18           204.7000000    0.044144983225
+      6   S      19            59.8400000    0.150463942825
+      6   S      20            20.0000000    0.356740864442
+      6   S      21             7.1930000    0.446532830321
+      6   S      22             2.6860000    0.145602944672
+
+      7   S      23             7.1930000   -0.160405033446
+      7   S      24             0.7000000    1.058215220651
+
+      8   S      25             0.2133000    1.000000000000
+
+      9   P      26            26.7900000    0.018253998243
+      9   P      27             5.9560000    0.116460988791
+      9   P      28             1.7070000    0.390177962446
+      9   P      29             0.5314000    0.637101938680
+
+     10   P      30             0.1654000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   10
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   18
+ NUMBER OF ELECTRONS                          =   14
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =    7
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =    7
+ TOTAL NUMBER OF ATOMS                        =    2
+ THE NUCLEAR REPULSION ENERGY IS        5.2917724924
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =CCSD(T)      VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       0     MAXIT =      30     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    18     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       F
+
+     ------------------------------------------
+     THE POINT GROUP IS CNV, NAXIS= 2, ORDER= 4
+     ------------------------------------------
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A1  =   10     A2  =    0     B1  =    4     B2  =    4
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS  50.00%
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.1 SECONDS, CPU UTILIZATION IS  20.00%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES      4352 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+     7 ORBITALS ARE OCCUPIED (    2 CORE ORBITALS).
+     3=A1       4=A1       5=A1       6=B1       7=B2       8=B1       9=B2  
+    10=A1      11=A1      12=A1      13=A1      14=A1      15=B1      16=B1  
+    17=B2  
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.1 SECONDS, CPU UTILIZATION IS  20.00%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ THE -PK- OPTION IS OFF, THE INTEGRALS ARE NOT IN SUPERMATRIX FORM.
+ STORING   15000 INTEGRALS/RECORD ON DISK, USING 12 BYTES/INTEGRAL.
+ TWO ELECTRON INTEGRAL EVALUATION REQUIRES   89411 WORDS OF MEMORY.
+ II,JST,KST,LST =  1  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  2  1  1  1 NREC =         1 INTLOC =    2
+ II,JST,KST,LST =  3  1  1  1 NREC =         1 INTLOC =    7
+ II,JST,KST,LST =  4  1  1  1 NREC =         1 INTLOC =   22
+ II,JST,KST,LST =  5  1  1  1 NREC =         1 INTLOC =   67
+ II,JST,KST,LST =  6  1  1  1 NREC =         1 INTLOC =  214
+ II,JST,KST,LST =  7  1  1  1 NREC =         1 INTLOC =  258
+ II,JST,KST,LST =  8  1  1  1 NREC =         1 INTLOC =  373
+ II,JST,KST,LST =  9  1  1  1 NREC =         1 INTLOC =  632
+ II,JST,KST,LST = 10  1  1  1 NREC =         1 INTLOC = 1177
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                2584
+          1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.03 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.1 SECONDS, CPU UTILIZATION IS  50.00%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+
+     NUCLEAR ENERGY =         5.2917724924
+     MAXIT =   30     NPUNCH=    2
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  DEM=F  SOSCF=T
+     DENSITY MATRIX CONV=  1.00E-06
+     SOSCF WILL OPTIMIZE      77 ORBITAL ROTATIONS, SOGTOL=   0.250
+     MEMORY REQUIRED FOR RHF ITERS=     32828 WORDS.
+
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD
+   1  0  0     -107.6537038388  -107.6537038388   0.260767920   0.000000000
+          ---------------START SECOND ORDER SCF---------------
+   2  1  0     -107.8290112999    -0.1753074611   0.113306142   0.060986105
+   3  2  0     -107.8443455306    -0.0153342307   0.025393281   0.024122520
+   4  3  0     -107.8474394578    -0.0030939272   0.002580554   0.001222164
+   5  4  0     -107.8474483960    -0.0000089382   0.000850385   0.000350742
+   6  5  0     -107.8474487961    -0.0000004001   0.000011010   0.000007866
+   7  6  0     -107.8474487965    -0.0000000004   0.000002323   0.000001200
+   8  7  0     -107.8474487965    -0.0000000000   0.000000454   0.000000266
+   9  8  0     -107.8474487965    -0.0000000000   0.000000044   0.000000025
+
+ RHF HAS CONVERGED, NOW COMPUTING EXACT TOTAL FOCK MATRIX
+ FOR USE DURING THE COUPLED CLUSTER CALCULATION THAT FOLLOWS.
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS     -107.8474487965 AFTER   9 ITERATIONS
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     5 (    5) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     6 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    12 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    15 (   11) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    16 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                  -15.8143   -15.8143    -1.0257    -1.0224    -0.3067
+                     A1         A1         A1         A1         A1  
+    1  N  1  S    0.706968  -0.706970  -0.173320  -0.173436  -0.001496
+    2  N  1  S   -0.000090   0.000084   0.408896   0.410448   0.008116
+    3  N  1  S    0.000896  -0.000877   0.359699   0.358162  -0.003288
+    4  N  1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    5  N  1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    6  N  1  Z    0.000054  -0.000030   0.002436  -0.004070  -0.499459
+    7  N  1  X    0.000000   0.000000   0.000000   0.000000   0.000000
+    8  N  1  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+    9  N  1  Z   -0.000010   0.000027   0.002385  -0.002732  -0.301247
+   10  N  2  S    0.706968   0.706970  -0.173320   0.173436  -0.001496
+   11  N  2  S   -0.000090  -0.000084   0.408896  -0.410448   0.008116
+   12  N  2  S    0.000896   0.000877   0.359699  -0.358162  -0.003288
+   13  N  2  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  N  2  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   15  N  2  Z   -0.000054  -0.000030  -0.002436  -0.004070   0.499459
+   16  N  2  X    0.000000   0.000000   0.000000   0.000000   0.000000
+   17  N  2  Y    0.000000   0.000000   0.000000   0.000000   0.000000
+   18  N  2  Z    0.000010   0.000027  -0.002385  -0.002732   0.301247
+
+                      6          7          8          9         10
+                   -0.3040    -0.3040    -0.1972    -0.1972    -0.1926
+                     B1         B2         B1         B2         A1  
+    1  N  1  S    0.000000   0.000000   0.000000   0.000000  -0.001798
+    2  N  1  S    0.000000   0.000000   0.000000   0.000000   0.006935
+    3  N  1  S    0.000000   0.000000   0.000000   0.000000  -0.000189
+    4  N  1  X    0.503958   0.000000   0.503914   0.000000   0.000000
+    5  N  1  Y    0.000000   0.503958   0.000000   0.503914   0.000000
+    6  N  1  Z    0.000000   0.000000   0.000000   0.000000   0.506002
+    7  N  1  X    0.296879   0.000000   0.297066   0.000000   0.000000
+    8  N  1  Y    0.000000   0.296879   0.000000   0.297066   0.000000
+    9  N  1  Z    0.000000   0.000000   0.000000   0.000000   0.295406
+   10  N  2  S    0.000000   0.000000   0.000000   0.000000   0.001798
+   11  N  2  S    0.000000   0.000000   0.000000   0.000000  -0.006935
+   12  N  2  S    0.000000   0.000000   0.000000   0.000000   0.000189
+   13  N  2  X    0.503958   0.000000  -0.503914   0.000000   0.000000
+   14  N  2  Y    0.000000   0.503958   0.000000  -0.503914   0.000000
+   15  N  2  Z    0.000000   0.000000   0.000000   0.000000   0.506002
+   16  N  2  X    0.296879   0.000000  -0.297066   0.000000   0.000000
+   17  N  2  Y    0.000000   0.296879   0.000000  -0.297066   0.000000
+   18  N  2  Z    0.000000   0.000000   0.000000   0.000000   0.295406
+
+                     11         12         13         14         15
+                    0.6295     0.6427     0.6427     0.6456     0.6456
+                     A1         B1         B2         B1         B2  
+    1  N  1  S    0.001816   0.000000   0.000000   0.000000   0.000000
+    2  N  1  S   -0.019099   0.000000   0.000000   0.000000   0.000000
+    3  N  1  S    0.017762   0.000000   0.000000   0.000000   0.000000
+    4  N  1  X    0.000000  -0.662177   0.000000  -0.662532   0.000000
+    5  N  1  Y    0.000000   0.000000  -0.662177   0.000000  -0.662532
+    6  N  1  Z   -0.663629   0.000000   0.000000   0.000000   0.000000
+    7  N  1  X    0.000000   0.777006   0.000000   0.777951   0.000000
+    8  N  1  Y    0.000000   0.000000   0.777006   0.000000   0.777951
+    9  N  1  Z    0.769058   0.000000   0.000000   0.000000   0.000000
+   10  N  2  S    0.001816   0.000000   0.000000   0.000000   0.000000
+   11  N  2  S   -0.019099   0.000000   0.000000   0.000000   0.000000
+   12  N  2  S    0.017762   0.000000   0.000000   0.000000   0.000000
+   13  N  2  X    0.000000  -0.662177   0.000000   0.662532   0.000000
+   14  N  2  Y    0.000000   0.000000  -0.662177   0.000000   0.662532
+   15  N  2  Z    0.663629   0.000000   0.000000   0.000000   0.000000
+   16  N  2  X    0.000000   0.777006   0.000000  -0.777951   0.000000
+   17  N  2  Y    0.000000   0.000000   0.777006   0.000000  -0.777951
+   18  N  2  Z   -0.769058   0.000000   0.000000   0.000000   0.000000
+
+                     16         17         18
+                    0.6606     0.9063     0.9093
+                     A1         A1         A1  
+    1  N  1  S   -0.001556  -0.091236  -0.091003
+    2  N  1  S    0.017401   1.110183   1.109867
+    3  N  1  S   -0.016449  -1.103616  -1.104489
+    4  N  1  X    0.000000   0.000000   0.000000
+    5  N  1  Y    0.000000   0.000000   0.000000
+    6  N  1  Z   -0.662800  -0.009610   0.009711
+    7  N  1  X    0.000000   0.000000   0.000000
+    8  N  1  Y    0.000000   0.000000   0.000000
+    9  N  1  Z    0.784651   0.016359  -0.014998
+   10  N  2  S    0.001556  -0.091236   0.091003
+   11  N  2  S   -0.017401   1.110183  -1.109867
+   12  N  2  S    0.016449  -1.103616   1.104489
+   13  N  2  X    0.000000   0.000000   0.000000
+   14  N  2  Y    0.000000   0.000000   0.000000
+   15  N  2  Z   -0.662800   0.009610   0.009711
+   16  N  2  X    0.000000   0.000000   0.000000
+   17  N  2  Y    0.000000   0.000000   0.000000
+   18  N  2  Z    0.784651  -0.016359  -0.014998
+ ...... END OF RHF CALCULATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.1 SECONDS, CPU UTILIZATION IS  50.00%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  N  1  S      2.00012     1.99713
+              2  N  1  S      1.06295     1.03371
+              3  N  1  S      0.93688     0.96911
+              4  N  1  X      0.66576     0.64080
+              5  N  1  Y      0.66576     0.64080
+              6  N  1  Z      0.65774     0.63354
+              7  N  1  X      0.33424     0.35920
+              8  N  1  Y      0.33424     0.35920
+              9  N  1  Z      0.34230     0.36651
+             10  N  2  S      2.00012     1.99713
+             11  N  2  S      1.06295     1.03371
+             12  N  2  S      0.93688     0.96911
+             13  N  2  X      0.66576     0.64080
+             14  N  2  Y      0.66576     0.64080
+             15  N  2  Z      0.65774     0.63354
+             16  N  2  X      0.33424     0.35920
+             17  N  2  Y      0.33424     0.35920
+             18  N  2  Z      0.34230     0.36651
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2
+
+    1    6.9975776
+    2    0.0024224   6.9975776
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 N             7.000000    0.000000         7.000000    0.000000
+    2 N             7.000000   -0.000000         7.000000   -0.000000
+
+          -------------------------------
+          BOND ORDER AND VALENCE ANALYSIS     BOND ORDER THRESHOLD=0.050
+          -------------------------------
+
+                   BOND                       BOND                       BOND
+  ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER      ATOM PAIR DIST  ORDER
+    1   2  4.900  3.000
+
+                       TOTAL       BONDED        FREE
+      ATOM            VALENCE     VALENCE     VALENCE
+    1 N                 3.000       3.000      -0.000
+    2 N                 3.000       3.000      -0.000
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    4.629829       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000   -0.000000    0.000000
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =        0.1 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.1 SECONDS, CPU UTILIZATION IS  38.46%
+
+     ---------------------------
+     COUPLED CLUSTER CALCULATION
+     ---------------------------
+ CCTYP                        =CCSD(T) 
+ TOTAL NUMBER OF MOS          =    18
+ NUMBER OF OCCUPIED MOS       =     7
+ NUMBER OF FROZEN CORE MOS    =     1
+ NUMBER OF FROZEN VIRTUAL MOS =     0
+ MAXIMUM CC ITERATIONS        =    30
+ MAXIMUM DIIS ITERATIONS      =     5
+ CONVERGENCE CRITERION FOR CC =     7
+ AMPLITUDE ACCURACY THRESHOLD = 0.0E+00
+
+     --------------------------------------------
+     PARTIAL TWO ELECTRON INTEGRAL TRANSFORMATION
+     --------------------------------------------
+
+ NUMBER OF CORE MOLECULAR ORBITALS     =    1
+ NUMBER OF OCCUPIED MOLECULAR ORBITALS =   18
+ TOTAL NUMBER OF MOLECULAR ORBITALS    =   18
+ TOTAL NUMBER OF ATOMIC ORBITALS       =   18
+ THRESHOLD FOR KEEPING TRANSFORMED 2E- INTEGRALS = 1.000E-09
+ AO INTEGRALS WILL BE READ IN FROM DISK...
+ EVALUATING THE FROZEN CORE ENERGY...
+ ----- FROZEN CORE ENERGY =       -48.2534604120
+
+ PLAN A: REQUIREMENTS FOR FULLY IN-MEMORY TRANSFORMATION:
+ # OF WORDS AVAILABLE =              1000000
+ # OF WORDS NEEDED    =               113984
+
+ CHOOSING IN MEMORY PARTIAL TRANSFORMATION...
+ TOTAL NUMBER OF TRANSFORMED 2E- INTEGRALS KEPT =         1865
+ ... END OF INTEGRAL TRANSFORMATION ...
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.1 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.2 SECONDS, CPU UTILIZATION IS  31.25%
+
+   -----------------------
+   COUPLED-CLUSTER PROGRAM
+   -----------------------
+
+   -------------------------------------------------------
+   P.PIECUCH, S.A.KUCHARSKI, M.WLOCH, K.KOWALSKI, M.MUSIAL
+   -------------------------------------------------------
+
+ *****************************************************************
+ THE FOLLOWING PAPERS SHOULD BE CITED WHEN USING COUPLED-CLUSTER
+ OPTIONS:
+
+ CCTYP = LCCD, CCD, CCSD, CCSD(T)
+ P. PIECUCH, S.A. KUCHARSKI, K. KOWALSKI, AND M. MUSIAL,
+ COMP. PHYS. COMMUN. 149, 71-96 (2002).
+
+ CCTYP = R-CC, CR-CC, CCSD(TQ), CR-CC(Q)
+ P. PIECUCH, S.A. KUCHARSKI, K. KOWALSKI, AND M. MUSIAL,
+ COMP. PHYS. COMMUN. 149, 71-96 (2002);
+ K. KOWALSKI AND P. PIECUCH, J. CHEM. PHYS. 113, 18-35 (2000);
+ K. KOWALSKI AND P. PIECUCH, J. CHEM. PHYS. 113, 5644-5652 (2000).
+
+ CCTYP = EOM-CCSD, CR-EOM
+ P. PIECUCH, S.A. KUCHARSKI, K. KOWALSKI, AND M. MUSIAL,
+ COMP. PHYS. COMMUN. 149, 71-96 (2002);
+ K. KOWALSKI AND P. PIECUCH, J. CHEM. PHYS. 120, 1715-1738 (2004);
+ M. WLOCH, J.R. GOUR, K. KOWALSKI, AND P. PIECUCH,
+ J. CHEM. PHYS. 122, 214107-1 - 214107-15 (2005).
+
+ CCTYP = CR-CCL
+ P. PIECUCH, S.A. KUCHARSKI, K. KOWALSKI, AND M. MUSIAL,
+ COMP. PHYS. COMMUN. 149, 71-96 (2002);
+ P. PIECUCH AND M. WLOCH, J. CHEM. PHYS. 123,
+ 224105-1 - 224105-10 (2005).
+
+ CCTYP = CR-EOML
+ P. PIECUCH, S.A. KUCHARSKI, K. KOWALSKI, AND M. MUSIAL,
+ COMP. PHYS. COMMUN. 149, 71-96 (2002);
+ P. PIECUCH, J. R. GOUR, AND M. WLOCH,
+ INT. J. QUANTUM CHEM. 109, 3268-3304 (2009);
+ K. KOWALSKI AND P. PIECUCH,
+ J. CHEM. PHYS. 120, 1715-1738 (2004).
+
+ IN ADDITION, THE USE OF CCPRP=.TRUE. IN $CCINP AND/OR THE USE
+ OF CCPRPE=.TRUE. IN $EOMINP SHOULD REFERENCE
+
+ M. WLOCH, J.R. GOUR, K. KOWALSKI, AND P. PIECUCH,
+ J. CHEM. PHYS. 122, 214107-1 - 214107-15 (2005).
+ *****************************************************************
+
+
+ THE FOLLOWING CALCULATIONS WILL BE PERFORMED:
+                                                     CCSD   
+                                                     CCSD[T]
+                                                     CCSD(T)
+
+ THE FOLLOWING ENERGY WILL BE CONSIDERED THE HIGHEST LEVEL:    CCSD(T)
+ THE AVAILABLE REPLICATED MEMORY IS     1000000 WORDS.
+ CONVERGENCE THRESHOLD:   1.0E-07
+ MAXIMUM NUMBER OF ITERATIONS:   30
+
+ MEMORY TO BE USED IN CC INTEGRAL SORTING IS       45972 WORDS.
+ THE MINIMUM MEMORY TO ACCOMPLISH SORTING IS       43326 WORDS.
+         1865 NON-ZERO TRANSFORMED 2E- INTEGRALS WERE SORTED INTO FILE 72:
+           59 [IJ|KL] TYPE,         222 [AJ|KL] TYPE,
+          241 [AB|IJ] TYPE,         358 [IA|BJ] TYPE,
+          624 [AB|CI] TYPE,         361 [AB|CD] TYPE.
+ TRANSFORMED INTEGRAL FILE  9 WAS READ    3 TIMES.
+ ....... DONE WITH CC INTEGRAL PREPARATION .......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =        0.1 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.2 SECONDS, CPU UTILIZATION IS  37.50%
+
+ MEMORY REQUIRED FOR THE CCSD ITERATIONS IS       30768 WORDS.
+ ITER:  1   CCSD    CORR. ENERGY:  13.4614454599   CONV.:  6.2495E+00
+ ITER:  2   CCSD    CORR. ENERGY:-237.3657512285   CONV.: -7.8878E+01
+ ITER:  3   CCSD    CORR. ENERGY: -52.5638811546   CONV.: -4.7904E+01
+ ITER:  4   CCSD    CORR. ENERGY:  27.3189695756   CONV.:  3.5781E+01
+ ITER:  5   CCSD    CORR. ENERGY:   1.3660343705   CONV.: -1.0538E+01
+ ITER:  6   CCSD    CORR. ENERGY:   7.8114596121   CONV.:  3.8638E+00
+ ITER:  7   CCSD    CORR. ENERGY:   2.9758751988   CONV.: -1.3247E+01
+ ITER:  8   CCSD    CORR. ENERGY:-208.7403726704   CONV.: -1.7843E+02
+ ITER:  9   CCSD    CORR. ENERGY:-157.3303294077   CONV.: -1.5720E+02
+ ITER: 10   CCSD    CORR. ENERGY:-218.1789421551   CONV.: -1.8635E+02
+ ITER: 11   CCSD    CORR. ENERGY:-193.8274893356   CONV.: -2.0158E+02
+ ITER: 12   CCSD    CORR. ENERGY:-434.4612389157   CONV.: -4.7684E+02
+ ITER: 13   CCSD    CORR. ENERGY:***************   CONV.: -2.7636E+04
+ ITER: 14   CCSD    CORR. ENERGY:***************   CONV.: -9.9252E+03
+ ITER: 15   CCSD    CORR. ENERGY:***************   CONV.: -2.4678E+04
+ ITER: 16   CCSD    CORR. ENERGY:***************   CONV.: -1.4952E+04
+ ITER: 17   CCSD    CORR. ENERGY:***************   CONV.: -1.3741E+05
+ ITER: 18   CCSD    CORR. ENERGY:***************   CONV.:  1.7304E+08
+ ITER: 19   CCSD    CORR. ENERGY:***************   CONV.: -1.8287E+08
+ ITER: 20   CCSD    CORR. ENERGY:***************   CONV.: -2.4352E+08
+ ITER: 21   CCSD    CORR. ENERGY:***************   CONV.: -3.8971E+08
+ ITER: 22   CCSD    CORR. ENERGY:***************   CONV.: -2.2929E+10
+ ITER: 23   CCSD    CORR. ENERGY:***************   CONV.: -4.3280E+16
+ ITER: 24   CCSD    CORR. ENERGY:***************   CONV.: -1.9401E+16
+ ITER: 25   CCSD    CORR. ENERGY:***************   CONV.: -3.5654E+17
+ ITER: 26   CCSD    CORR. ENERGY:***************   CONV.: -1.1009E+19
+ ITER: 27   CCSD    CORR. ENERGY:***************   CONV.: -2.2557E+23
+ ITER: 28   CCSD    CORR. ENERGY:***************   CONV.: -1.5340E+45
+ ITER: 29   CCSD    CORR. ENERGY:***************   CONV.: -1.4853E+45
+ ITER: 30   CCSD    CORR. ENERGY:***************   CONV.: -1.0936E+49
+
+                  CCSD     ITERATIONS DID NOT CONVERGE
+
+
+    MBPT(2) CORRELATION ENERGY:  -4.0940599606
+    CCSD    CORRELATION ENERGY:***************
+
+ T1 DIAGNOSTIC        =***************
+ NORM OF THE T1 VECTOR=***************
+ NORM OF THE T2 VECTOR=***************
+
+ THE FIVE LARGEST T1 AMPLITUDES ARE:
+ T1 AMPLITUDE IS********** FOR I=   6 -> A=  12
+ T1 AMPLITUDE IS********** FOR I=   7 -> A=  13
+ T1 AMPLITUDE IS********** FOR I=   4 -> A=  10
+ T1 AMPLITUDE IS********** FOR I=   5 -> A=  11
+ T1 AMPLITUDE IS********** FOR I=   5 -> A=  17
+
+ THE FIVE LARGEST SPIN-UNIQUE T2 AMPLITUDES ARE:
+ T2 AMPLITUDE IS********** FOR I,J=   7   7 -> A,B=  13  13
+ T2 AMPLITUDE IS********** FOR I,J=   6   6 -> A,B=  12  12
+ T2 AMPLITUDE IS********** FOR I,J=   6   7 -> A,B=  12  13
+ T2 AMPLITUDE IS********** FOR I,J=   5   7 -> A,B=  11  13
+ T2 AMPLITUDE IS********** FOR I,J=   5   6 -> A,B=  11  12
+ PRINTED T2(I-ALPHA,J-BETA -> A-ALPHA,B-BETA) VALUES
+ EQUAL   T2(J-ALPHA,I-BETA -> B-ALPHA,A-BETA) AMPLITUDES.
+
+ ....... DONE WITH CC AMPLITUDE ITERATIONS .......
+ STEP CPU TIME =     0.11 TOTAL CPU TIME =        0.2 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.3 SECONDS, CPU UTILIZATION IS  62.96%
+ AMPLITUDE ITERATIONS DID NOT CONVERGE
+ EXECUTION OF GAMESS TERMINATED -ABNORMALLY- AT Thu Jan 17 19:22:28 2019
+                580000  WORDS OF DYNAMIC MEMORY USED
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.2 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.3 SECONDS, CPU UTILIZATION IS  62.96%
+ DDI Process 0: error code 911
+ ddikick.x: application process 0 quit unexpectedly.
+ ddikick.x: Fatal error detected.
+ The error is most likely to be in the application, so check for
+ input errors, disk space, memory needs, application bugs, etc.
+ ddikick.x will now clean up all processes, and exit...
+ ddikick.x: Sending kill signal to DDI processes.
+ ddikick.x: Execution terminated due to error(s).
+unset echo
+----- accounting info -----
+Files used on the master node localhost were:
+-rw-rw-r-- 1 maho maho    7502 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.dat
+-rw------- 1 maho maho    1755 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F05
+-rw-rw-r-- 1 maho maho  180016 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F08
+-rw-rw-r-- 1 maho maho  181248 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F09
+-rw-rw-r-- 1 maho maho 1603280 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F10
+-rw-rw-r-- 1 maho maho  388608 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F70
+-rw-rw-r-- 1 maho maho  353760 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F71
+-rw-rw-r-- 1 maho maho  585640 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F72
+-rw-rw-r-- 1 maho maho    1584 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F73
+-rw-rw-r-- 1 maho maho   69696 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F74
+-rw-rw-r-- 1 maho maho       0 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F75
+-rw-rw-r-- 1 maho maho       0 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F76
+-rw-rw-r-- 1 maho maho       0 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.F77
+-rw------- 1 maho maho    1755 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.inp
+-rw-rw-r-- 1 maho maho   38220 Jan 17 19:22 ./N2.SV/4.9/N2.SV.CCSDT.4.9.gamess.log
+ls: No match.
+ls: No match.
+ls: No match.
+Thu Jan 17 19:22:30 JST 2019
+0.0u 0.0s 0:02.44 2.0% 0+0k 0+8io 0pf+0w

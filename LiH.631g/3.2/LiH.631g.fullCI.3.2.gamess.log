@@ -1,0 +1,867 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host bach.ad64.riken.go.jp
+under operating system Darwin at 2019年 1月17日 木曜日 17時49分36秒 JST
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem   1024-blocks       Used Available Capacity iused      ifree %iused  Mounted on
+/dev/disk2s2  1953178672 1144752108 808426564    59%  984387 4293982892    0%   /Volumes/Users
+GAMESS temporary binary files will be written to ./
+GAMESS supplementary output files will be written to ./
+Copying input file LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.inp to your run's scratch directory...
+cp LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.inp .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F05
+unset echo
+/Volumes/Users/maho/bin/gamess//ddikick.x /Volumes/Users/maho/bin/gamess//gamess.00.x LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess -ddi 1 1 bach.ad64.riken.go.jp -scr ./
+
+ Distributed Data Interface kickoff program.
+ Initiating 1 compute processes on 1 nodes to run the following command:
+ /Volumes/Users/maho/bin/gamess//gamess.00.x LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess 
+
+          ******************************************************
+          *         GAMESS VERSION = 18 AUG 2016 (R1)          *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT APPLE VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     BRETT BODE, KURT BRORSEN, CALEB CARLIN, GALINA CHABAN, WEI CHEN,
+     CHEOL HO CHOI, PAUL DAY, ALBERT DEFUSCO, NUWAN DESILVA, TIM DUDLEY,
+     DMITRI FEDOROV, GRAHAM FLETCHER, MARK FREITAG, KURT GLAESEMANN,
+     DAN KEMP, GRANT MERRILL, NORIYUKI MINEZAWA, JONATHAN MULLIN,
+     TAKESHI NAGATA, SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON,
+     MIKE PAK, SPENCER PRUITT, LUKE ROSKOP, JIM SHOEMAKER, LYUDMILA SLIPCHENKO,
+     TONY SMITH, SAROM SOK LEANG, JIE SONG, TETSUYA TAKETSUGU, SIMON WEBB,
+     PENG XU, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, AARON WEST, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     NAT. INST. OF ADVANCED INDUSTRIAL SCIENCE AND TECHNOLOGY: KAZUO KITAURA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, PIOTR PIECUCH
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: ANNA POMOGAEVA, DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, JUNJI SEINO,
+          YUYA NAKAJIMA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH: ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+     UNIVERSITY OF COPENHAGEN: Jimmy Kromann, CASPER STEINMANN
+     TOKYO INSTITUTE OF TECHNOLOGY: HIROYA NAKATA
+     NAGOYA UNIVERSITY: YOSHIO NISHIMOTO, STEPHAN IRLE
+     MOSCOW STATE UNIVERSITY: VLADIMIR MIRONOV
+
+ EXECUTION OF GAMESS BEGUN Thu Jan 17 17:49:36 2019
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD> $CONTRL SCFTYP=RHF CITYP=ALDET $END                                            
+ INPUT CARD> $GUESS  GUESS=HUCKEL $END                                                      
+ INPUT CARD> $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=1 NPFUNC=1 $END                              
+ INPUT CARD> $CIDET SZ=0 GROUP=C2V NCORE=0 NACT=20 NELS=4 $END                              
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>LiH...HF...6-31G* basis                                                         
+ INPUT CARD>Cnv   2                                                                         
+ INPUT CARD>                                                                                
+ INPUT CARD>Li    3.0    0.0      0.0     0.0                                               
+ INPUT CARD>H     1.0    0.0      0.0     3.2                                               
+ INPUT CARD> $END                                                                           
+    1000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=N31          IGAUSS=       6      POLAR=POPN31  
+     NDFUNC=       1     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       1      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+ LiH...HF...6-31G* basis                                                         
+
+ THE POINT GROUP OF THE MOLECULE IS CNV     
+ THE ORDER OF THE PRINCIPAL AXIS IS     2
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ LI          3.0     0.0000000000        0.0000000000        0.0000000000
+ H           1.0     0.0000000000        0.0000000000        6.0471231607
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 LI         2 H     
+
+   1 LI      0.0000000    3.2000000  
+   2 H       3.2000000    0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ LI        
+
+      1   S       1           642.4189150    0.002142607810
+      1   S       2            96.7985153    0.016208871501
+      1   S       3            22.0911212    0.077315572504
+      1   S       4             6.2010702    0.245786052013
+      1   S       5             1.9351177    0.470189004025
+      1   S       6             0.6367358    0.345470845019
+
+      2   L       7             2.3249184   -0.035091745735    0.008941508043
+      2   L       8             0.6324304   -0.191232843103    0.141009464046
+      2   L       9             0.0790534    1.083987794916    0.945363695309
+
+      3   L      10             0.0359620    1.000000000000    1.000000000000
+
+      4   D      11             0.2000000    1.000000000000
+
+ H         
+
+      5   S      12            18.7311370    0.033494604338
+      5   S      13             2.8253944    0.234726953484
+      5   S      14             0.6401217    0.813757326146
+
+      6   S      15             0.1612778    1.000000000000
+
+      7   P      16             1.1000000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =    7
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   20
+ NUMBER OF ELECTRONS                          =    4
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =    2
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =    2
+ TOTAL NUMBER OF ATOMS                        =    2
+ THE NUCLEAR REPULSION ENERGY IS        0.4961036712
+
+ THIS MOLECULE IS RECOGNIZED AS BEING LINEAR,
+ ORBITAL LZ DEGENERACY TOLERANCE ETOLLZ= 1.00E-06
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =ALDET        CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       0     MAXIT =      30     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    20     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       F
+
+     ------------------------------------------
+     THE POINT GROUP IS CNV, NAXIS= 2, ORDER= 4
+     ------------------------------------------
+
+     DIMENSIONS OF THE SYMMETRY SUBSPACES ARE
+ A1  =   11     A2  =    1     B1  =    4     B2  =    4
+
+ ..... DONE SETTING UP THE RUN .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS   0.00%
+
+          ********************
+          1 ELECTRON INTEGRALS
+          ********************
+ ...... END OF ONE-ELECTRON INTEGRALS ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS   0.00%
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES      4469 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+     2 ORBITALS ARE OCCUPIED (    1 CORE ORBITALS).
+     2=A1       3=A1       4=A1       5=A1       6=A1       7=A1       8=A1  
+     9=A1      10=A1      11=A1      12=A2  
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS   0.00%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+
+          --------------------
+          2 ELECTRON INTEGRALS
+          --------------------
+
+ THE -PK- OPTION IS OFF, THE INTEGRALS ARE NOT IN SUPERMATRIX FORM.
+ STORING   15000 INTEGRALS/RECORD ON DISK, USING 12 BYTES/INTEGRAL.
+ TWO ELECTRON INTEGRAL EVALUATION REQUIRES   90424 WORDS OF MEMORY.
+ II,JST,KST,LST =  1  1  1  1 NREC =         1 INTLOC =    1
+ II,JST,KST,LST =  2  1  1  1 NREC =         1 INTLOC =    2
+ II,JST,KST,LST =  3  1  1  1 NREC =         1 INTLOC =   34
+ II,JST,KST,LST =  4  1  1  1 NREC =         1 INTLOC =  214
+ II,JST,KST,LST =  5  1  1  1 NREC =         1 INTLOC = 1189
+ II,JST,KST,LST =  6  1  1  1 NREC =         1 INTLOC = 1864
+ II,JST,KST,LST =  7  1  1  1 NREC =         1 INTLOC = 2710
+ TOTAL NUMBER OF NONZERO TWO-ELECTRON INTEGRALS =                5534
+          1 INTEGRAL RECORDS WERE STORED ON DISK FILE  8.
+  ...... END OF TWO-ELECTRON INTEGRALS .....
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS  66.67%
+
+          --------------------------
+                 RHF SCF CALCULATION
+          --------------------------
+
+     NUCLEAR ENERGY =         0.4961036712
+     MAXIT =   30     NPUNCH=    2
+     EXTRAP=T  DAMP=F  SHIFT=F  RSTRCT=F  DIIS=F  DEM=F  SOSCF=T
+     DENSITY MATRIX CONV=  1.00E-06
+     SOSCF WILL OPTIMIZE      36 ORBITAL ROTATIONS, SOGTOL=   0.250
+     MEMORY REQUIRED FOR RHF ITERS=     33224 WORDS.
+
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE     ORB. GRAD
+   1  0  0       -7.6083282039    -7.6083282039   1.027159900   0.000000000
+          ---------------START SECOND ORDER SCF---------------
+ SOSCF IS SCALING ROTATION ANGLE MATRIX, SQCDF=    0.364657
+   2  1  0       -7.7161661363    -0.1078379324   0.902504242   0.133249235
+   3  2  0       -7.8904665152    -0.1743003789   0.138466843   0.018875303
+   4  3  0       -7.8964348078    -0.0059682927   0.078864009   0.007374342
+   5  4  0       -7.8975303998    -0.0010955920   0.042427455   0.006038065
+   6  5  0       -7.8977313610    -0.0002009612   0.005949668   0.000509993
+   7  6  0       -7.8977372884    -0.0000059274   0.000807225   0.000228633
+   8  7  0       -7.8977374474    -0.0000001590   0.000084390   0.000032987
+   9  8  0       -7.8977374494    -0.0000000020   0.000019844   0.000001654
+  10  9  0       -7.8977374494    -0.0000000000   0.000001943   0.000000182
+  11 10  0       -7.8977374494    -0.0000000000   0.000000031   0.000000023
+
+          -----------------
+          DENSITY CONVERGED
+          -----------------
+     TIME TO FORM FOCK OPERATORS=       0.0 SECONDS (       0.0 SEC/ITER)
+     TIME TO SOLVE SCF EQUATIONS=       0.0 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS       -7.8977374494 AFTER  11 ITERATIONS
+
+ LZ VALUE ANALYSIS FOR THE MOS
+ ----------------------------------------
+ MO     1 (    1) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     2 (    2) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     3 (    3) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     4 (    4) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     5 (    4) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     6 (    5) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     7 (    6) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO     8 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO     9 (    7) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    10 (    8) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    11 (    9) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    12 (    9) HAS LZ(WEIGHT)=-2.00( 50.0%)  2.00( 50.0%) 
+ MO    13 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    14 (   10) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    15 (   11) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    16 (   12) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    17 (   13) HAS LZ(WEIGHT)= 0.00(100.0%) 
+ MO    18 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    19 (   14) HAS LZ(WEIGHT)=-1.00( 50.0%)  1.00( 50.0%) 
+ MO    20 (   15) HAS LZ(WEIGHT)= 0.00(100.0%) 
+
+          ------------
+          EIGENVECTORS
+          ------------
+
+                      1          2          3          4          5
+                   -2.5564    -0.2210    -0.0281     0.0364     0.0364
+                     A1         A1         A1         B1         B2  
+    1  LI 1  S    0.998752  -0.084452  -0.157602  -0.000000  -0.000000
+    2  LI 1  S   -0.012004  -0.018299  -0.045101  -0.000000  -0.000000
+    3  LI 1  X   -0.000000  -0.000000  -0.000000   0.171532  -0.000000
+    4  LI 1  Y   -0.000000  -0.000000  -0.000000  -0.000000   0.171532
+    5  LI 1  Z   -0.004409   0.065769  -0.144486  -0.000000  -0.000000
+    6  LI 1  S    0.001798   0.398350   0.783561  -0.000000  -0.000000
+    7  LI 1  X   -0.000000  -0.000000  -0.000000   0.856488  -0.000000
+    8  LI 1  Y   -0.000000  -0.000000  -0.000000  -0.000000   0.856488
+    9  LI 1  Z    0.002944   0.179471  -0.409410  -0.000000  -0.000000
+   10  LI 1 XX    0.008819   0.017913   0.042678  -0.000000  -0.000000
+   11  LI 1 YY    0.008819   0.017913   0.042678  -0.000000  -0.000000
+   12  LI 1 ZZ    0.008550   0.047711   0.047273  -0.000000  -0.000000
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000  -0.000000  -0.000000
+   14  LI 1 XZ   -0.000000  -0.000000  -0.000000  -0.035476  -0.000000
+   15  LI 1 YZ   -0.000000  -0.000000  -0.000000  -0.000000  -0.035476
+   16  H  2  S    0.000107   0.246937  -0.080930  -0.000000  -0.000000
+   17  H  2  S    0.000074   0.535401  -0.157129  -0.000000  -0.000000
+   18  H  2  X   -0.000000  -0.000000  -0.000000   0.001901  -0.000000
+   19  H  2  Y   -0.000000  -0.000000  -0.000000  -0.000000   0.001901
+   20  H  2  Z   -0.000106  -0.002533  -0.001524  -0.000000  -0.000000
+
+                      6          7          8          9         10
+                    0.1049     0.1629     0.1817     0.1817     0.2216
+                     A1         A1         B2         B1         A1  
+    1  LI 1  S   -0.066157   0.067558   0.000000   0.000000   0.073705
+    2  LI 1  S    0.824933   2.092073   0.000000   0.000000   2.452248
+    3  LI 1  X    0.000000   0.000000   0.000000   1.662032  -0.000000
+    4  LI 1  Y    0.000000   0.000000   1.662032   0.000000  -0.000000
+    5  LI 1  Z   -0.038594  -1.244077   0.000000   0.000000   1.126724
+    6  LI 1  S   -0.192410  -1.711273   0.000000   0.000000  -1.971390
+    7  LI 1  X    0.000000   0.000000   0.000000  -1.437515  -0.000000
+    8  LI 1  Y    0.000000   0.000000  -1.437515   0.000000  -0.000000
+    9  LI 1  Z    0.920862   0.863601   0.000000   0.000000  -1.210759
+   10  LI 1 XX   -0.021627  -0.234282   0.000000   0.000000  -0.218151
+   11  LI 1 YY   -0.021627  -0.234282   0.000000   0.000000  -0.218151
+   12  LI 1 ZZ   -0.151533  -0.123651   0.000000   0.000000  -0.236571
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000  -0.000000
+   14  LI 1 XZ    0.000000   0.000000   0.000000  -0.061369  -0.000000
+   15  LI 1 YZ    0.000000   0.000000  -0.061369   0.000000  -0.000000
+   16  H  2  S   -0.122983   0.041276   0.000000   0.000000   0.012669
+   17  H  2  S   -0.658255   0.167408   0.000000   0.000000   0.348503
+   18  H  2  X    0.000000   0.000000   0.000000  -0.000334  -0.000000
+   19  H  2  Y    0.000000   0.000000  -0.000334   0.000000  -0.000000
+   20  H  2  Z   -0.003030   0.002598   0.000000   0.000000  -0.005000
+
+                     11         12         13         14         15
+                    0.5208     0.5208     0.5316     0.5316     0.5507
+                     A2         A1         B1         B2         A1  
+    1  LI 1  S    0.000000   0.000000  -0.000000  -0.000000  -0.013522
+    2  LI 1  S    0.000000   0.000000  -0.000000  -0.000000  -0.109124
+    3  LI 1  X    0.000000   0.000000   0.108418  -0.000000  -0.000000
+    4  LI 1  Y    0.000000   0.000000  -0.000000   0.108418  -0.000000
+    5  LI 1  Z    0.000000   0.000000  -0.000000  -0.000000   0.069306
+    6  LI 1  S    0.000000   0.000000  -0.000000  -0.000000   0.151675
+    7  LI 1  X    0.000000   0.000000  -0.058139  -0.000000  -0.000000
+    8  LI 1  Y    0.000000   0.000000  -0.000000  -0.058139  -0.000000
+    9  LI 1  Z    0.000000   0.000000  -0.000000  -0.000000   0.078670
+   10  LI 1 XX    0.000000   0.866025  -0.000000  -0.000000  -0.489913
+   11  LI 1 YY    0.000000  -0.866025  -0.000000  -0.000000  -0.489913
+   12  LI 1 ZZ    0.000000   0.000000  -0.000000  -0.000000   0.998813
+   13  LI 1 XY    1.000000   0.000000  -0.000000  -0.000000  -0.000000
+   14  LI 1 XZ    0.000000   0.000000   0.997456  -0.000000  -0.000000
+   15  LI 1 YZ    0.000000   0.000000  -0.000000   0.997456  -0.000000
+   16  H  2  S    0.000000   0.000000  -0.000000  -0.000000  -0.124560
+   17  H  2  S    0.000000   0.000000  -0.000000  -0.000000  -0.130344
+   18  H  2  X    0.000000   0.000000   0.004515  -0.000000  -0.000000
+   19  H  2  Y    0.000000   0.000000  -0.000000   0.004515  -0.000000
+   20  H  2  Z    0.000000   0.000000  -0.000000  -0.000000  -0.019893
+
+                     16         17         18         19         20
+                    1.1521     1.2562     2.4612     2.4612     2.4830
+                     A1         A1         B2         B1         A1  
+    1  LI 1  S    0.090296   0.075944  -0.000000  -0.000000   0.002750
+    2  LI 1  S    8.477828   4.037091  -0.000000  -0.000000   0.787717
+    3  LI 1  X   -0.000000   0.000000  -0.000000   0.013793  -0.000000
+    4  LI 1  Y   -0.000000   0.000000   0.013793  -0.000000  -0.000000
+    5  LI 1  Z   -0.017693   0.028366  -0.000000  -0.000000   0.073078
+    6  LI 1  S   -2.505048  -1.504773  -0.000000  -0.000000  -0.211362
+    7  LI 1  X   -0.000000   0.000000  -0.000000  -0.033431  -0.000000
+    8  LI 1  Y   -0.000000   0.000000  -0.033431  -0.000000  -0.000000
+    9  LI 1  Z    0.121815  -0.261669  -0.000000  -0.000000  -0.006151
+   10  LI 1 XX   -2.885484  -1.205559  -0.000000  -0.000000  -0.284951
+   11  LI 1 YY   -2.885484  -1.205559  -0.000000  -0.000000  -0.284951
+   12  LI 1 ZZ   -2.779718  -1.456999  -0.000000  -0.000000  -0.208685
+   13  LI 1 XY   -0.000000   0.000000  -0.000000  -0.000000  -0.000000
+   14  LI 1 XZ   -0.000000   0.000000  -0.000000  -0.008612  -0.000000
+   15  LI 1 YZ   -0.000000   0.000000  -0.008612  -0.000000  -0.000000
+   16  H  2  S    0.512904  -1.229720  -0.000000  -0.000000   0.028758
+   17  H  2  S   -0.518015   1.170390  -0.000000  -0.000000  -0.055582
+   18  H  2  X   -0.000000   0.000000  -0.000000   1.000238  -0.000000
+   19  H  2  Y   -0.000000   0.000000   1.000238  -0.000000  -0.000000
+   20  H  2  Z   -0.028937   0.001676  -0.000000  -0.000000   1.003194
+ ...... END OF RHF CALCULATION ......
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.2 SECONDS, CPU UTILIZATION IS  16.67%
+
+     ----------------------------------------------------------------
+     PROPERTY VALUES FOR THE RHF   SELF-CONSISTENT FIELD WAVEFUNCTION
+     ----------------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =     -11.2329475875
+                TWO ELECTRON ENERGY =       2.8391064669
+           NUCLEAR REPULSION ENERGY =       0.4961036712
+                                      ------------------
+                       TOTAL ENERGY =      -7.8977374494
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =       2.8391064669
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =     -19.0207130363
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       0.4961036712
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =     -15.6855028982
+               TOTAL KINETIC ENERGY =       7.7877654488
+                 VIRIAL RATIO (V/T) =       2.0141211239
+
+  ...... PI ENERGY ANALYSIS ......
+
+ ENERGY ANALYSIS:
+            FOCK ENERGY=     -5.5547346496
+          BARE H ENERGY=    -11.2329475875
+     ELECTRONIC ENERGY =     -8.3938411186
+         KINETIC ENERGY=      7.7877654488
+          N-N REPULSION=      0.4961036712
+           TOTAL ENERGY=     -7.8977374474
+        SIGMA PART(1+2)=     -8.3938411186
+               (K,V1,2)=      7.7877654488    -19.0207130363      2.8391064689
+           PI PART(1+2)=      0.0000000000
+               (K,V1,2)=      0.0000000000      0.0000000000      0.0000000000
+  SIGMA SKELETON, ERROR=     -7.8977374474      0.0000000000
+             MIXED PART= 0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00
+ ...... END OF PI ENERGY ANALYSIS ......
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  LI 1  S      1.99793     1.97899
+              2  LI 1  S     -0.02107     0.10839
+              3  LI 1  X      0.00000     0.00000
+              4  LI 1  Y      0.00000     0.00000
+              5  LI 1  Z      0.05077     0.07763
+              6  LI 1  S      0.44610     0.30190
+              7  LI 1  X      0.00000     0.00000
+              8  LI 1  Y      0.00000     0.00000
+              9  LI 1  Z      0.18179     0.18547
+             10  LI 1 XX      0.01151     0.02135
+             11  LI 1 YY      0.01151     0.02135
+             12  LI 1 ZZ      0.03648     0.05245
+             13  LI 1 XY      0.00000     0.00000
+             14  LI 1 XZ      0.00000     0.00000
+             15  LI 1 YZ      0.00000     0.00000
+             16  H  2  S      0.32964     0.38113
+             17  H  2  S      0.95524     0.87121
+             18  H  2  X      0.00000     0.00000
+             19  H  2  Y      0.00000     0.00000
+             20  H  2  Z      0.00011     0.00015
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2
+
+    1    2.4734386
+    2    0.2415758   1.0434099
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 LI            2.715014    0.284986         2.747518    0.252482
+    2 H             1.284986   -0.284986         1.252482   -0.252482
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    0.759543        0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000   -9.627560    9.627560
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.2 SECONDS, CPU UTILIZATION IS  16.67%
+
+ DETERMINANT CI OPTIONS   NRNFG   NPFLG
+ INTEGRAL TRANSFORMATION    1       0
+ DIAGONALIZE HAMILTONIAN    1       0
+ FORM 1E- DENSITY MATRIX    1       0
+ FORM 2E- DENSITY MATRIX    0       0
+
+     --------------------------------------------------
+          AMES LABORATORY DETERMINANTAL FULL CI
+     PROGRAM WRITTEN BY JOE IVANIC AND KLAUS RUEDENBERG
+     --------------------------------------------------
+
+ THE POINT GROUP                  =   C2V     
+ THE STATE SYMMETRY               =   A1      
+ NUMBER OF CORE ORBITALS          =    0
+ NUMBER OF ACTIVE ORBITALS        =   20
+ NUMBER OF ALPHA ELECTRONS        =    2 (   2 ACTIVE)
+ NUMBER OF BETA ELECTRONS         =    2 (   2 ACTIVE)
+ NUMBER OF OCCUPIED ORBITALS      =   20
+ NUMBER OF CI STATES REQUESTED    =    1
+ NUMBER OF CI STARTING VECTORS    =    1
+ MAX. NO. OF CI EXPANSION VECTORS =   10
+ SIZE OF INITIAL CI GUESS MATRIX  =  300
+ MAX. NO. OF CI ITERS/STATE       =  100
+ CI DIAGONALIZATION CRITERION     = 1.00E-06
+ CI PROPERTIES WILL BE FOUND FOR ROOT NUMBER   1
+ 1E- DENSITY MATRIX OPTIONS ARE 1
+
+ CORRELATION ENERGY ANALYSIS      =    F
+
+ SYMMETRIES FOR THE   0 CORE,  20 ACTIVE ARE
+
+   ACTIVE= A1    A1    A1    B1    B2    A1    A1    B2    B1    A1  
+           A2    A1    B1    B2    A1    A1    A1    B2    B1    A1  
+
+     --------------------------------------------
+     PARTIAL TWO ELECTRON INTEGRAL TRANSFORMATION
+     --------------------------------------------
+
+ NUMBER OF CORE MOLECULAR ORBITALS     =    0
+ NUMBER OF OCCUPIED MOLECULAR ORBITALS =   20
+ TOTAL NUMBER OF MOLECULAR ORBITALS    =   20
+ TOTAL NUMBER OF ATOMIC ORBITALS       =   20
+ THRESHOLD FOR KEEPING TRANSFORMED 2E- INTEGRALS = 1.000E-09
+ AO INTEGRALS WILL BE READ IN FROM DISK...
+
+ PLAN A: REQUIREMENTS FOR FULLY IN-MEMORY TRANSFORMATION:
+ # OF WORDS AVAILABLE =              1000000
+ # OF WORDS NEEDED    =               146042
+
+ CHOOSING IN MEMORY PARTIAL TRANSFORMATION...
+ TOTAL NUMBER OF TRANSFORMED 2E- INTEGRALS KEPT =         5962
+ ... END OF INTEGRAL TRANSFORMATION ...
+ STEP CPU TIME =     0.01 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.2 SECONDS, CPU UTILIZATION IS  21.05%
+
+     --------------------------------------------------
+          AMES LABORATORY DETERMINANTAL FULL CI
+     PROGRAM WRITTEN BY JOE IVANIC AND KLAUS RUEDENBERG
+     --------------------------------------------------
+
+ THE NUMBER OF DETERMINANTS HAVING SPACE SYMMETRY A1 
+ IN POINT GROUP C2V  WITH SZ=  0.0 IS           9826
+ THE DETERMINANT FULL CI REQUIRES          451749 WORDS
+ INITIAL CI VECTOR GUESS TIME  :          0.0
+ INITIAL FULL CI ITERATION TIME:          0.0
+
+ ITERATION      ENERGY           GRADIENT
+     0       -7.9445544568     0.07721046
+     1       -7.9456864460     0.00584199
+     2       -7.9457305373     0.00297343
+     3       -7.9457364852     0.00084676
+     4       -7.9457377266     0.00059672
+     5       -7.9457381557     0.00027121
+     6       -7.9457381951     0.00006558
+     7       -7.9457381993     0.00002851
+     8       -7.9457382000     0.00001098
+     9       -7.9457382001     0.00000281
+    10       -7.9457382001     0.00000061
+
+ CONVERGED STATE    1 ENERGY=       -7.9457382001 IN   10 ITERS
+
+ ALL STATES CONVERGED.
+
+ CI EIGENVECTORS WILL BE LABELED IN GROUP=C2V     
+ PRINTING CI COEFFICIENTS LARGER THAN 5.000E-02
+
+ STATE   1  ENERGY=        -7.9457382001  S=  0.00  SZ=  0.00  SPACE SYM=A1  
+
+        ALPHA         |        BETA          | CI COEFFICIENT
+----------------------|----------------------|---------------
+ 11000000000000000000 | 11000000000000000000 |   0.8727137501
+ 11000000000000000000 | 10100000000000000000 |   0.2048565367
+ 10100000000000000000 | 11000000000000000000 |   0.2048565367
+ 10100000000000000000 | 10000100000000000000 |   0.1822399618
+ 10000100000000000000 | 10100000000000000000 |   0.1822399618
+ 10100000000000000000 | 10100000000000000000 |  -0.1752203908
+ 10000100000000000000 | 10000100000000000000 |  -0.1729723461
+ ..... DONE WITH DETERMINANT CI COMPUTATION .....
+ STEP CPU TIME =     0.22 TOTAL CPU TIME =        0.3 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.5 SECONDS, CPU UTILIZATION IS  56.52%
+
+     ---------------------------
+     ONE PARTICLE DENSITY MATRIX
+     ---------------------------
+
+ DENSITY MATRIX WILL BE SAVED FOR   1-TH STATE WITH S= 0.00
+
+ CI EIGENSTATE   1 TOTAL ENERGY =       -7.9457382001
+
+          NATURAL ORBITALS IN ATOMIC ORBITAL BASIS
+          ----------------------------------------
+
+                      1          2          3          4          5
+                    1.9998     1.6736     0.3247     0.0006     0.0004
+                     A1         A1         A1         A1         A1  
+    1  LI 1  S    0.998525  -0.111377  -0.150625   0.057454  -0.034531
+    2  LI 1  S   -0.007319   0.109318   0.227266   1.542239   0.582247
+    3  LI 1  X   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+    4  LI 1  Y   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+    5  LI 1  Z   -0.002917   0.049909   0.083734   1.122986  -0.018523
+    6  LI 1  S    0.000814   0.434738   0.569226  -1.077363  -0.095715
+    7  LI 1  X   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+    8  LI 1  Y   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+    9  LI 1  Z    0.002197   0.094503   0.101336  -0.568985  -0.088180
+   10  LI 1 XX    0.007804   0.019481   0.016008  -0.459153  -0.085135
+   11  LI 1 YY    0.007804   0.019481   0.016008  -0.459153  -0.085135
+   12  LI 1 ZZ    0.007711   0.033264   0.038894   0.110912  -0.138284
+   13  LI 1 XY   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   14  LI 1 XZ   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   15  LI 1 YZ   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   16  H  2  S    0.000403   0.277940  -0.371931   0.094000   1.197239
+   17  H  2  S    0.000488   0.459976  -0.468132  -0.101012  -1.091330
+   18  H  2  X   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   19  H  2  Y   -0.000000  -0.000000  -0.000000   0.000000   0.000000
+   20  H  2  Z   -0.000064  -0.000619  -0.002577  -0.372858  -0.075604
+
+                      6          7          8          9         10
+                    0.0002     0.0002     0.0001     0.0001     0.0001
+                     B1         B2         B1         B2         A1  
+    1  LI 1  S    0.000000   0.000000   0.000000   0.000000   0.009263
+    2  LI 1  S    0.000000   0.000000   0.000000   0.000000   0.022691
+    3  LI 1  X    0.472593   0.000000   0.785212   0.000000   0.000000
+    4  LI 1  Y    0.000000   0.472593   0.000000   0.785212   0.000000
+    5  LI 1  Z    0.000000   0.000000   0.000000   0.000000   0.669318
+    6  LI 1  S    0.000000   0.000000   0.000000   0.000000  -0.264125
+    7  LI 1  X    0.305884   0.000000  -0.216164   0.000000   0.000000
+    8  LI 1  Y    0.000000   0.305884   0.000000  -0.216164   0.000000
+    9  LI 1  Z    0.000000   0.000000   0.000000   0.000000  -0.462593
+   10  LI 1 XX    0.000000   0.000000   0.000000   0.000000   0.082463
+   11  LI 1 YY    0.000000   0.000000   0.000000   0.000000   0.082463
+   12  LI 1 ZZ    0.000000   0.000000   0.000000   0.000000   0.200464
+   13  LI 1 XY    0.000000   0.000000   0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.298936   0.000000   0.150805   0.000000   0.000000
+   15  LI 1 YZ    0.000000   0.298936   0.000000   0.150805   0.000000
+   16  H  2  S    0.000000   0.000000   0.000000   0.000000   0.107272
+   17  H  2  S    0.000000   0.000000   0.000000   0.000000  -0.060634
+   18  H  2  X    0.588882   0.000000  -0.770777   0.000000   0.000000
+   19  H  2  Y    0.000000   0.588882   0.000000  -0.770777   0.000000
+   20  H  2  Z    0.000000   0.000000   0.000000   0.000000   0.909014
+
+                     11         12         13         14         15
+                    0.0001     0.0000     0.0000     0.0000     0.0000
+                     A1         B1         B2         A1         A1  
+    1  LI 1  S    0.140815  -0.000000  -0.000000   0.026226   0.003925
+    2  LI 1  S    9.062213  -0.000000  -0.000000   2.992054   2.005804
+    3  LI 1  X    0.000000  -1.397605  -0.000000   0.000000   0.000000
+    4  LI 1  Y    0.000000  -0.000000  -1.397605   0.000000   0.000000
+    5  LI 1  Z   -0.390122  -0.000000  -0.000000   0.886069  -0.434401
+    6  LI 1  S   -3.748449  -0.000000  -0.000000  -0.425847  -0.011604
+    7  LI 1  X    0.000000   1.554731  -0.000000   0.000000   0.000000
+    8  LI 1  Y    0.000000  -0.000000   1.554731   0.000000   0.000000
+    9  LI 1  Z    0.117472  -0.000000  -0.000000  -0.911584   1.338952
+   10  LI 1 XX   -2.562493  -0.000000  -0.000000  -0.950516  -0.985824
+   11  LI 1 YY   -2.562493  -0.000000  -0.000000  -0.950516  -0.985824
+   12  LI 1 ZZ   -2.539215  -0.000000  -0.000000  -1.897000  -0.910581
+   13  LI 1 XY    0.000000  -0.000000  -0.000000   0.000000   0.000000
+   14  LI 1 XZ    0.000000   0.252465  -0.000000   0.000000   0.000000
+   15  LI 1 YZ    0.000000  -0.000000   0.252465   0.000000   0.000000
+   16  H  2  S   -0.202180  -0.000000  -0.000000  -0.126533   0.382032
+   17  H  2  S    0.328739  -0.000000  -0.000000   0.244658  -0.855543
+   18  H  2  X    0.000000  -0.244161  -0.000000   0.000000   0.000000
+   19  H  2  Y    0.000000  -0.000000  -0.244161   0.000000   0.000000
+   20  H  2  Z    0.098525  -0.000000  -0.000000  -0.045392   0.131655
+
+                     16         17         18         19         20
+                    0.0000     0.0000     0.0000     0.0000     0.0000
+                     B1         B2         A2         A1         A1  
+    1  LI 1  S   -0.000000  -0.000000   0.000000  -0.000000  -0.026550
+    2  LI 1  S   -0.000000  -0.000000   0.000000  -0.000000   1.412934
+    3  LI 1  X    0.102549  -0.000000   0.000000  -0.000000   0.000000
+    4  LI 1  Y   -0.000000   0.102549   0.000000  -0.000000   0.000000
+    5  LI 1  Z   -0.000000  -0.000000   0.000000  -0.000000   0.101251
+    6  LI 1  S   -0.000000  -0.000000   0.000000  -0.000000   0.496785
+    7  LI 1  X   -0.497030  -0.000000   0.000000  -0.000000   0.000000
+    8  LI 1  Y   -0.000000  -0.497030   0.000000  -0.000000   0.000000
+    9  LI 1  Z   -0.000000  -0.000000   0.000000  -0.000000  -0.383155
+   10  LI 1 XX   -0.000000  -0.000000   0.000000   0.866025  -1.240364
+   11  LI 1 YY   -0.000000  -0.000000   0.000000  -0.866025  -1.240364
+   12  LI 1 ZZ   -0.000000  -0.000000   0.000000  -0.000000  -0.199971
+   13  LI 1 XY   -0.000000  -0.000000   1.000000  -0.000000   0.000000
+   14  LI 1 XZ    0.907840  -0.000000   0.000000  -0.000000   0.000000
+   15  LI 1 YZ   -0.000000   0.907840   0.000000  -0.000000   0.000000
+   16  H  2  S   -0.000000  -0.000000   0.000000  -0.000000   0.063218
+   17  H  2  S   -0.000000  -0.000000   0.000000  -0.000000  -0.129872
+   18  H  2  X   -0.002552  -0.000000   0.000000  -0.000000   0.000000
+   19  H  2  Y   -0.000000  -0.002552   0.000000  -0.000000   0.000000
+   20  H  2  Z   -0.000000  -0.000000   0.000000  -0.000000   0.086774
+ ..... DONE WITH ONE PARTICLE DENSITY MATRIX .....
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.3 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.5 SECONDS, CPU UTILIZATION IS  56.52%
+
+     --------------------------------------------------------
+     ALDET CI PROPERTIES...FOR THE WAVEFUNCTION OF STATE    1
+               USING THE EXPECTATION VALUE DENSITY
+     --------------------------------------------------------
+
+          -----------------
+          ENERGY COMPONENTS
+          -----------------
+
+         WAVEFUNCTION NORMALIZATION =       1.0000000000
+
+                ONE ELECTRON ENERGY =     -11.2440648742
+                TWO ELECTRON ENERGY =       2.8022230029
+           NUCLEAR REPULSION ENERGY =       0.4961036712
+                                      ------------------
+                       TOTAL ENERGY =      -7.9457382001
+
+ ELECTRON-ELECTRON POTENTIAL ENERGY =       2.8022230029
+  NUCLEUS-ELECTRON POTENTIAL ENERGY =     -19.1439426503
+   NUCLEUS-NUCLEUS POTENTIAL ENERGY =       0.4961036712
+                                      ------------------
+             TOTAL POTENTIAL ENERGY =     -15.8456159762
+               TOTAL KINETIC ENERGY =       7.8998777761
+                 VIRIAL RATIO (V/T) =       2.0058052068
+
+          ---------------------------------------
+          MULLIKEN AND LOWDIN POPULATION ANALYSES
+          ---------------------------------------
+
+               ----- POPULATIONS IN EACH AO -----
+                             MULLIKEN      LOWDIN
+              1  LI 1  S      1.99820     1.98345
+              2  LI 1  S      0.16128     0.21821
+              3  LI 1  X      0.00012     0.00011
+              4  LI 1  Y      0.00012     0.00011
+              5  LI 1  Z      0.02406     0.03341
+              6  LI 1  S      0.61875     0.43773
+              7  LI 1  X      0.00006     0.00007
+              8  LI 1  Y      0.00006     0.00007
+              9  LI 1  Z      0.05699     0.07254
+             10  LI 1 XX      0.01661     0.06074
+             11  LI 1 YY      0.01661     0.06074
+             12  LI 1 ZZ      0.03255     0.08261
+             13  LI 1 XY      0.00000     0.00000
+             14  LI 1 XZ      0.00003     0.00003
+             15  LI 1 YZ      0.00003     0.00003
+             16  H  2  S      0.37058     0.39774
+             17  H  2  S      0.70348     0.65181
+             18  H  2  X      0.00013     0.00013
+             19  H  2  Y      0.00013     0.00013
+             20  H  2  Z      0.00021     0.00034
+
+          ----- MULLIKEN ATOMIC OVERLAP POPULATIONS -----
+          (OFF-DIAGONAL ELEMENTS NEED TO BE MULTIPLIED BY 2)
+
+             1           2
+
+    1    2.8073106
+    2    0.1181561   0.9563772
+
+          TOTAL MULLIKEN AND LOWDIN ATOMIC POPULATIONS
+       ATOM         MULL.POP.    CHARGE          LOW.POP.     CHARGE
+    1 LI            2.925467    0.074533         2.949850    0.050150
+    2 H             1.074533   -0.074533         1.050150   -0.050150
+
+          ---------------------
+          ELECTROSTATIC MOMENTS
+          ---------------------
+
+ POINT   1           X           Y           Z (BOHR)    CHARGE
+                 0.000000    0.000000    0.759543       -0.00 (A.U.)
+         DX          DY          DZ         /D/  (DEBYE)
+     0.000000    0.000000   -4.548228    4.548228
+ ...... END OF PROPERTY EVALUATION ......
+ STEP CPU TIME =     0.00 TOTAL CPU TIME =        0.3 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.5 SECONDS, CPU UTILIZATION IS  55.32%
+               580000  WORDS OF DYNAMIC MEMORY USED
+ EXECUTION OF GAMESS TERMINATED NORMALLY Thu Jan 17 17:49:37 2019
+ DDI: 263640 bytes (0.3 MB / 0 MWords) used by master data server.
+
+ ----------------------------------------
+ CPU timing information for all processes
+ ========================================
+ 0: 0.219 + 0.53 = 0.273
+ 1: 0.10 + 0.44 = 0.54
+ ----------------------------------------
+ ddikick.x: exited gracefully.
+unset echo
+----- accounting info -----
+Files used on the master node bach.ad64.riken.go.jp were:
+-rw-------  1 maho  staff      280  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F05
+-rw-r--r--  1 maho  staff   180016  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F08
+-rw-r--r--  1 maho  staff   181704  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F09
+-rw-r--r--  1 maho  staff  1832320  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F10
+-rw-r--r--  1 maho  staff    78640  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.F12
+-rw-r--r--  1 maho  staff    14499  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.dat
+-rw-------  1 maho  staff      280  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.inp
+-rw-r--r--  1 maho  staff    43016  1 17 17:49 .//LiH.631g/3.2/LiH.631g.fullCI.3.2.gamess.log
+ls: No match.
+ls: No match.
+ls: No match.
+2019年 1月17日 木曜日 17時49分40秒 JST
+0.340u 0.196s 0:03.70 14.3%	0+0k 0+0io 0pf+0w
